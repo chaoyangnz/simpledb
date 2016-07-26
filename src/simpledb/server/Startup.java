@@ -1,7 +1,8 @@
 package simpledb.server;
 
-import simpledb.remote.*;
 import java.rmi.registry.*;
+
+import simpledb.remote.*;
 
 public class Startup {
    public static void main(String args[]) throws Exception {
