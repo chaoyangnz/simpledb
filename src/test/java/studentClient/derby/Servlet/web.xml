@@ -1,0 +1,22 @@
+<web-app>
+
+
+    <servlet>
+      <servlet-name>FindMajors</servlet-name>
+      <servlet-class>ServletFindMajors</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindMajors</servlet-name>
+        <url-pattern>/ServletFindMajors</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>FindMajorsInputForm</servlet-name>
+      <servlet-class>ServletFindMajorsInputForm</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindMajorsInputForm</servlet-name>
+        <url-pattern>/findmajors</url-pattern>
+    </servlet-mapping>
+
+</web-app>
