@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="studentdb">
+        <provider>
+        	org.apache.openjpa.persistence.PersistenceProviderImpl
+        </provider>
+
+        <class>Student</class>
+        <class>Enroll</class>
+        <class>Section</class>
+        <class>Course</class>
+        <class>Dept</class>
+	<class>Permit</class>
+
+        <properties>
+            <property name="openjpa.ConnectionURL" value="jdbc:derby://localhost/studentdb"/>
+            <property name="openjpa.ConnectionDriverName" value="org.apache.derby.jdbc.ClientDriver"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
