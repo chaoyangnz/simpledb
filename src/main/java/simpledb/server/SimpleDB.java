@@ -37,8 +37,11 @@ public class SimpleDB {
     * @param dirname the name of the database directory
     */
    public static void init(String dirname) {
+      // fm, logm, bm is setup
       initFileLogAndBufferMgr(dirname);
+
       Transaction tx = new Transaction();
+
       boolean isnew = fm.isNew();
       if (isnew)
          System.out.println("creating new database");
@@ -46,6 +49,7 @@ public class SimpleDB {
          System.out.println("recovering existing database");
          tx.recover();
       }
+      
       initMetadataMgr(isnew, tx);
       tx.commit();
    }

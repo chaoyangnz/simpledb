@@ -13,16 +13,17 @@ import java.nio.charset.Charset;
  * For an example of how to use Page and 
  * {@link Block} objects, 
  * consider the following code fragment.  
- * The first portion increments the integer at offset 792 of block 6 of file junk.  
+ * The first portion **increments the integer** at offset 792 of block 6 of file junk.  
  * The second portion stores the string "hello" at offset 20 of a page, 
  * and then appends it to a new block of the file.  
  * It then reads that block into another page 
  * and extracts the value "hello" into variable s.
  * <pre>
+ * "this code make the value plus 1 which at 792"
  * Page p1 = new Page();
  * Block blk = new Block("junk", 6);
  * p1.read(blk);
- * int n = p1.getInt(792);
+ * int n = p1.getInt(792); // what does getInt do, what is 792
  * p1.setInt(792, n+1);
  * p1.write(blk);
  *

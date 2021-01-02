@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="simpledb.file.Block" x="288" y="253"/>
+    <CommunicationClass name="simpledb.file.FileMgr" x="86" y="334"/>
+    <CommunicationClass name="simpledb.file.Page" x="283" y="326">
+        <Association destinationClassName="simpledb.file.FileMgr"
+            endpointName="filemgr" kind="Simple"/>
+        <Communication destinationClassName="simpledb.file.FileMgr"/>
+    </CommunicationClass>
+</ClassDiagram>

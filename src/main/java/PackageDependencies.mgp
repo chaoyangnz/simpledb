@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="simpledb.server" x="198" y="311">
+        <DependencyLink destination="simpledb.buffer"/>
+        <DependencyLink destination="simpledb.file"/>
+        <DependencyLink destination="simpledb.tx"/>
+    </Package>
+    <Package name="simpledb.record" x="752" y="308">
+        <DependencyLink destination="simpledb.buffer"/>
+        <DependencyLink destination="simpledb.file"/>
+        <DependencyLink destination="simpledb.tx"/>
+    </Package>
+    <Package name="simpledb.tx" x="205" y="591">
+        <DependencyLink destination="simpledb.buffer"/>
+        <DependencyLink destination="simpledb.file"/>
+        <DependencyLink destination="simpledb.server"/>
+    </Package>
+    <Package name="simpledb.query" x="471" y="229">
+        <DependencyLink destination="simpledb.tx"/>
+        <DependencyLink destination="simpledb.record"/>
+        <DependencyLink destination="simpledb.server"/>
+    </Package>
+    <Package name="simpledb.file" x="478" y="757">
+        <DependencyLink destination="simpledb.server"/>
+    </Package>
+    <Package name="simpledb.buffer" x="758" y="530">
+        <DependencyLink destination="simpledb.file"/>
+        <DependencyLink destination="simpledb.server"/>
+    </Package>
+    <Package name="simpledb.index.btree" x="931" y="460">
+        <DependencyLink destination="simpledb.buffer"/>
+        <DependencyLink destination="simpledb.file"/>
+        <DependencyLink destination="simpledb.query"/>
+        <DependencyLink destination="simpledb.tx"/>
+        <DependencyLink destination="simpledb.record"/>
+    </Package>
+</PackageAnalysis>

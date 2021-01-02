@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="simpledb.buffer.BasicBufferMgr" x="32" y="51">
+        <Association destinationClassName="simpledb.buffer.Buffer"
+            endpointName="bufferpool" kind="Simple"/>
+        <Communication destinationClassName="simpledb.buffer.Buffer"/>
+    </CommunicationClass>
+    <CommunicationClass name="simpledb.buffer.BufferAbortException"
+        x="541" y="44"/>
+    <CommunicationClass name="simpledb.buffer.Buffer" x="356" y="64">
+        <Communication destinationClassName="simpledb.buffer.PageFormatter"/>
+    </CommunicationClass>
+    <CommunicationClass name="simpledb.buffer.PageFormatter" x="445" y="183"/>
+    <CommunicationClass name="simpledb.buffer.BufferMgr" x="161" y="214">
+        <Association
+            destinationClassName="simpledb.buffer.BasicBufferMgr"
+            endpointName="bufferMgr" kind="Simple"/>
+        <Communication destinationClassName="simpledb.buffer.BasicBufferMgr"/>
+        <Communication destinationClassName="simpledb.buffer.Buffer"/>
+    </CommunicationClass>
+</ClassDiagram>

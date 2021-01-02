@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="simpledb.index.btree.BTPageFormatter"
+        x="11" y="445"/>
+    <CommunicationClass name="simpledb.index.btree.BTreeIndex" x="333" y="213">
+        <Association
+            destinationClassName="simpledb.index.btree.BTreeLeaf"
+            endpointName="leaf" kind="Simple"/>
+        <Communication destinationClassName="simpledb.index.btree.BTreeDir"/>
+        <Communication destinationClassName="simpledb.index.btree.BTreePage"/>
+        <Communication destinationClassName="simpledb.index.btree.BTreeLeaf"/>
+    </CommunicationClass>
+    <CommunicationClass name="simpledb.index.btree.DirEntry" x="123" y="523"/>
+    <CommunicationClass name="simpledb.index.btree.BTreeDir" x="38" y="345">
+        <Association
+            destinationClassName="simpledb.index.btree.BTreePage"
+            endpointName="contents" kind="Simple"/>
+        <Communication destinationClassName="simpledb.index.btree.BTreePage"/>
+    </CommunicationClass>
+    <CommunicationClass name="simpledb.index.btree.BTreePage" x="308" y="432"/>
+    <CommunicationClass name="simpledb.index.btree.BTreeLeaf" x="546" y="400">
+        <Association
+            destinationClassName="simpledb.index.btree.BTreePage"
+            endpointName="contents" kind="Simple"/>
+        <Communication destinationClassName="simpledb.index.btree.BTreePage"/>
+    </CommunicationClass>
+</ClassDiagram>
